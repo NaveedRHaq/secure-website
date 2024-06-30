@@ -11,16 +11,11 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3 cp index.html s3://secure-website-artifacts-naveed/index.html --content-type text/html
-      - aws s3 cp fibonacci.html s3://secure-website-artifacts-naveed/fibonacci.html --content-type text/html
-      - aws s3 cp qualifications.html s3://secure-website-artifacts-naveed/qualifications.html --content-type text/html
-      - aws s3 cp portfolio.html s3://secure-website-artifacts-naveed/portfolio.html --content-type text/html
-      - aws s3 cp services.html s3://secure-website-artifacts-naveed/services.html --content-type text/html
-      - aws s3 cp style.css s3://secure-website-artifacts-naveed/style.css --content-type text/css
-      - aws s3 cp style2.css s3://secure-website-artifacts-naveed/style2.css --content-type text/css
-      - aws s3 cp mediaqueries.css s3://secure-website-artifacts-naveed/mediaqueries.css --content-type text/css
-      - aws s3 cp script.js s3://secure-website-artifacts-naveed/script.js --content-type application/javascript
-      - aws s3 cp images/ s3://secure-website-artifacts-naveed/images/ --recursive --exclude "*" --include "*.jpg" --content-type image/jpeg
+      - aws s3 sync . s3://secure-website-artifacts-naveed/ --exclude "*" --include "*.html" --content-type "text/html"
+      - aws s3 sync . s3://secure-website-artifacts-naveed/ --exclude "*" --include "*.css" --content-type "text/css"
+      - aws s3 sync . s3://secure-website-artifacts-naveed/ --exclude "*" --include "*.js" --content-type "application/javascript"
+      - aws s3 sync . s3://secure-website-artifacts-naveed/ --exclude "*" --include "*.jpg" --content-type "image/jpeg"
+      - aws s3 sync . s3://secure-website-artifacts-naveed/ --exclude "*" --include "*.png" --content-type "image/png"
 
 artifacts:
   files:
