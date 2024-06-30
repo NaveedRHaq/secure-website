@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+
+<body>
+    <div class="toggle">
+        <button type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+    </div>
+    <nav id="desktop-nav">
+        <div class="logo">Naveed Haq</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Naveed Haq</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="qualifications.html" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="fibonacci.html" onclick="toggleMenu()">Fibonacci</a></li>
+
+            </div>
+        </div>
+    </nav>
+    <div style="height:12vh; background-color: transparent;"></div>
+    <!-- ... [rest of the code from above remains unchanged] ... -->
+
+    <!-- Two buttons centered at the top -->
+    <div class="btn-container-qual">
+        <button class="btn btnqual" onclick="window.open('./images/resume.pdf')">Resume</button>
+        <button class="btn btnqual" onclick="window.open('./images/transcript.pdf')">Transcript</button>
+    </div>
+
+    <!-- Two boxes side by side centered with a title and info inside -->
+    <div class="allboxcontent">
+        <div class="centered-boxes">
+            <!-- First Box -->
+            <div class="box">
+                <h3 style="border-bottom: 2px solid #545657; display: inline-block; padding: 5px 0; margin-top: 20px;">
+                    Technical Skills</h3>
+                <ul style="list-style-type: square; padding-left: 20px;">
+                    <li><a  style="color: rgb(82, 155, 215);"  href="https://docs.oracle.com/en/java/" target="_blank">Java</a>, C++ & <a  style="color: rgb(82, 155, 215);" href="https://docs.python.org/3/" target="_blank">Python</a> Programming</li>
+                    <li><a  style="color: rgb(82, 155, 215);"  href="https://www.tensorflow.org/" target="_blank">Machine Learning</a> Modeling </li>
+                    <li>Cloud Services (AWS: S3, Lambda, ECR, Terraform)</li>
+                    <li>Docker & Artifactory</li>
+                    <li>Kafka Real-time Data Processing</li>
+                    <li>CI/CD Pipelines (Jenkins & AzureDevOps/TFS)</li>
+                    <li>Angular (HTML/CSS)</li>
+                    <li>Kubernetes, Elasticsearch, & Logstash</li>
+                    <li>React.JS & .NET Development</li>
+                    <li>R-studio / Statistical Analysis</li>
+                    <li>Git Version Control</li>
+                </ul>
+            </div>
+
+            <!-- Second Box -->
+            <div class="box">
+                <h3 style="border-bottom: 2px solid #545657; display: inline-block; padding: 5px 0; margin-top: 20px;">
+                    Areas of Interest</h3>
+                <ul style="list-style-type: square; padding-left: 20px;">
+                    <li>Software Engineering</li>
+                    <li><a  style="color: rgb(82, 155, 215);" href="https://hbr.org/2016/12/a-guide-to-solving-social-problems-with-machine-learning" target="_blank">Machine Learning & AI Solutions</a></li>
+                    <li>Cloud Infrastructure </li>
+                    <li>Data Science and Big Data</li>
+                    <li>Full-Stack Development</li>
+                    <li>Algorithm Design & Analysis</li>
+                    <li>Distributed Systems</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-row">
+            <div class="box">
+                <h3 style="border-bottom: 2px solid #545657; display: inline-block; padding: 5px 0; margin-top: 20px;">
+                    Reasoning</h3>
+                <p style="color: rgb(49, 49, 49);">I'm captivated by Software Engineering and Full-Stack Development as
+                    they provide the foundation to craft innovative digital solutions. My intrigue for Machine Learning
+                    & AI Solutions arises from their transformative potential, reshaping how we tackle complex
+                    challenges. The capabilities of <a style="color: rgb(82, 155, 215);" href="https://aws.amazon.com/?nc2=h_lg" target="_blank">Cloud Infrastructure</a> offer a modern approach to
+                    data-driven decision making, further fueling my passion for technology.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... [script tag and rest of the code remain unchanged] ... -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

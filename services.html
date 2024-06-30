@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+
+<body>
+    <div class="toggle">
+        <button type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+    </div>
+    <nav id="desktop-nav">
+        <div class="logo">Naveed Haq</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Naveed Haq</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="qualifications.html" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="fibonacci.html" onclick="toggleMenu()">Fibonacci</a></li>
+
+            </div>
+        </div>
+    </nav>
+    <div style="height:14vh; background-color: transparent;"></div>
+    <!-- Three Column Sections -->
+    <div class="three-columns">
+
+        <!-- First Column -->
+        <div class="column" id="s1">
+            <img class="servicepic" src="./images/TBE.png" alt="Description of Image 1">
+            <h3>The Big Event</h3>
+            <p>During The Big Event at A&M, I had the incredible opportunity to participate in a meaningful
+                environmental initiative. Alongside fellow volunteers, we dedicated our day to planting trees and laying
+                at mulch in local College Station/Bryan homes. The sense of accomplishment was profound as we watched
+                those young saplings find their place in the earth, knowing that our efforts would contribute to a
+                greener, healthier town environment.</p>
+            <div class="btn-container-service">
+                <button class="btn btn-service" onclick="window.open('https://bigevent.tamu.edu/about/')">Learn
+                    More</button>
+            </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="column" id="s2">
+            <img class="servicepic" src="./images/treefolk.jpeg" alt="Description of Image 2">
+            <h3>TreeFolks</h3>
+            <p>Working with Treefolks in Austin was an enlightening experience. This non-profit organization is deeply
+                committed to the restoration and preservation of Austin's natural landscape. Together, we planted trees
+                in various urban areas, improving the city's aesthetics and environment. Witnessing the local
+                community's dedication to fostering a greener future was truly inspiring.</p>
+            <div class="btn-container-service">
+                <button class="btn btn-service"
+                    onclick="window.open('https://www.treefolks.org/ready-set-plant/#overview')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Third Column -->
+        <div class="column" id="s3">
+            <img class="servicepic" src="./images/BeeCavePark.jpeg" alt="Description of Image 3">
+            <h3>Bee Cave Park</h3>
+            <p>Volunteering at Bee Cave City Park was a valuable lesson in environmental stewardship. Our group joined
+                forces to pick up trash and debris that had accumulated in my hometown park. With every piece of litter
+                collected, we knew we were helping preserve this special place for future generations to enjoy. It was a
+                reminder of the importance of maintaining and protecting our local parks for the well-being of both
+                nature and our community.</p>
+            <div class="btn-container-service">
+                <button class="btn btn-service"
+                    onclick="window.open('https://www.beecavetexas.gov/government/departments/parks_rec/parks')">Learn
+                    More</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

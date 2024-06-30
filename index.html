@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+
+<body>
+    <div class="toggle">
+        <button type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+    </div>
+    <nav id="desktop-nav">
+        <div class="logo">Naveed Haq</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Naveed Haq</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="qualifications.html" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="fibonacci.html" onclick="toggleMenu()">Fibonacci</a></li>
+
+            </div>
+        </div>
+    </nav>
+    <div style="height:14vh; background-color: transparent;"></div>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img style="transform: scale(1.3); border-radius: 50px;" src="./images/user.JPG" alt="Naveed Haq profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Naveed Haq</h1>
+            <p class="section__text__p2">Aspiring Software Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./images/resume.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href= './#contact'">Contact Me</button>
+            </div>
+            <div id="socials-container">
+                <img src="./images/linkedin.png" alt="My Linkedin Profile" class="icon" onclick="
+                    location.href='https://www.linkedin.com/in/naveed-haq-27444020b/'"></img>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Feel Free to Reach Out</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contaact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./images/email.png" alt="Email Icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:naveedhaq2002@gmail.com">naveedhaq2002@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./images/linkedin.png" alt="Linkedin Icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/naveed-haq-27444020b/">Linkedin</a></p>
+            </div>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

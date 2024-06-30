@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+
+<body>
+    <div class="toggle">
+        <button type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+    </div>
+    <nav id="desktop-nav">
+        <div class="logo">Naveed Haq</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Naveed Haq</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="qualifications.html" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="fibonacci.html" onclick="toggleMenu()">Fibonacci</a></li>
+
+            </div>
+        </div>
+    </nav>
+    <div style="height:15vh; background-color: transparent;"></div>
+    <!-- First Section -->
+    <div class="portfolio-container">
+        <section class="content-section">
+            <div class="image-section">
+                <img src="./images/AD.png" alt="Description of Image 1">
+                <h2>Anomaly Detection</h2>
+                <p><a  style="color: rgb(82, 155, 215);"  href="https://machinelearningmastery.com/anomaly-detection-with-isolation-forest-and-kernel-density-estimation/" target="_blank">Learn about Isolation Forest Model</a></p>
+            </div>
+            <div class="text-section">
+                <p>At JP Morgan Chase & Co., I was tasked for the development of a system for monitoring and detecting anomalies in
+                    request/order data, which significantly enhanced overall system stability. The tech stack harnessed included
+                    Kafka for real-time data processing, Jenkins for CI/CD. The system design included a decoubled archetecture in AWS using S3,Lambda, and SQS which were all created in a IaC environment.
+                    The Isolation Forest machine learning model was used for dependable anomaly detection, and Symphony Chat
+                    integration ensured secure alert communication.</p>
+                <p>&nbsp;</p>
+                <p>Tech Stack: Kafka, Java, Python, Jenkins, AWS, Docker, Artifactory, and Git.</p>
+            </div>
+        </section>
+
+        <!-- Second Section -->
+        <section class="content-section">
+            <div class="image-section">
+                <img src="./images/Unknown-2.png" alt="Description of Image 2">
+                <h2>ElasticSearch Application</h2>
+            </div>
+            <div class="text-section">
+                <p>During my tenure at General Motors, I was instrumental in architecting a Full-Stack OpenSearch
+                    application for the Global Supply Chain Organization. From gathering requirements to executing test
+                    cases, my responsibilities spanned the full software development lifecycle. Kubernetes was used to manage our ElasticSearch cluster. The backend was done using Java and the frontend was done using Angular,HTML and CSS. The final product was
+                    adeptly integrated into the GPSC Insight Application and infrastructural components.</p>
+                <p>&nbsp;</p>
+                <p> Tech Stack: Java, Spring Boot, Python, Angular, Kubernetes, Elasticsearch, and AzureDevOps in a SAFE
+                    Agile environment.</p>
+            </div>
+        </section>
+
+        <!-- Third Section -->
+        <section class="content-section" id="buss">
+            <div class="image-section">
+                <img style="box-shadow: none;" src="./images/bus-2.png" alt="Description of Image 3">
+                <h2>Tamu Nav</h2>
+            </div>
+            <div class="text-section">
+                <p>In the Aggie Coding Club at Texas A&M University, I collaborated with peers to design a user-centric
+                    bus route app, TAMU Nav. The app offered innovative features like a path-finding solution for buses,
+                    and a navigation bar developed using React.js. The incorporation of bus route data was seamlessly
+                    achieved with ASP.net.</p>
+                <p>&nbsp;</p>
+                <p>Tech Stack: React.Native/JS, Git, SQL, Java, and .NET</p>
+            </div>
+        </section>
+
+        <!-- Fourth Section -->
+        <section class="content-section">
+            <div class="image-section">
+                <img src="./images/MLA.png" alt="Description of Image 4">
+                <h2>Essay Enhancement and Formatting Tool (In Progress)</h2>
+            </div>
+            <div class="text-section">
+                <ul id="portfoliolist">
+                    <li>A user-friendly platform allowing users to upload their essay, provide sources, and select their
+                        desired formatting style</li>
+                    <li>Uses advanced AI to process and integrate relevant information from provided sources into the
+                        user's essay</li>
+                    <li>Harnesses AI capabilities to automatically check and correct grammatical errors, ensuring
+                        high-quality content</li>
+                    <li>Automatically formats the enhanced essay according to popular academic styles like APA, MLA, and
+                        Chicago</li>
+                    <li>Provides a preview of the finalized essay, allowing users to edit, download, or share seamlessly
+                    </li>
+                    <li>Designed to be resource-efficient, ensuring smooth AI processing and easy scalability for
+                        increased user loads</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p>Tech Stack: Python, React.js, HTML/CSS, AWS: RDS, EC2, AI:spaCy, NLTK, ChatGPT</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

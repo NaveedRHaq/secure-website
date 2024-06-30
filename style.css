@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.toggle{
+    position:fixed;
+    background-color: rgb(223, 217, 185);
+    
+    height: fit-content;
+    justify-content: left;
+    padding: 0px 0;
+    width: 100%;
+    z-index: 1001;
+    margin-top: 0vh;
+    cursor: pointer;
+}    
+.toggle button{
+    padding: 5px 20px;
+    font-size: 14px;
+    background-image: url('./images/137598574-old-grunge-newspaper-paper-textured-background-blurred-vintage-newspapers-texture-background-blur.jpg');
+    color: maroon; /* Text color */
+    border: maroon 2px solid;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1002;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    background-image: url('./images/137598574-old-grunge-newspaper-paper-textured-background-blurred-vintage-newspapers-texture-background-blur.jpg');
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color:rgb(85,85,85);
+
+}
+a, .btn {
+    transition: all 300ms ease;
+}
+nav, .nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;    
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+.logo{
+    font-size: 2rem;
+}
+.logo:hover{
+      cursor:defualt;
+}
+
+#desktop-nav{
+   height: 120px;
+}
+
+#hamburger-nav{
+    display: none;
+    height: 120px;
+}
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: hsl(0, 0%, 100%, .65); 
+    width: fit-content;
+    max-height: 0;
+    overflow:hidden;
+    transition: all 0.3 ease-in-out;
+    
+}
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5 rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+}
+.menu-links.open {
+    max-height: 300px;
+}
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container {
+    display: flex;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    flex-direction: row-reverse;
+}
+.section__pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+.section__text{
+    align-self: center;
+    text-align: center;
+    order:2;
+}
+.section__text p{
+    font-weight: 600;
+    color: rgb(50,0,0,.8)
+}
+.section__text h1{
+    font-weight: 600;
+    color: maroon;
+}
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p1 {
+    font-size: 2.25 rem;
+    margin-bottom: 1rem;
+}
+
+.section__text__p2 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75 rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2{
+    border: rgb(120, 33, 33) 0.1rem solid;
+}
+
+.btn-color-1:hover, .btn-color-2:hover{
+    cursor: pointer;
+}
+
+.btn-color-1, .btn-color-2:hover{
+    background: rgb(120, 33, 33);
+    color:white;
+}
+.btn-color-1:hover{
+    background: rgb(71, 0, 0);
+}
+.btn-color-2{
+    background: none;
+}
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+.btn-container{
+    gap: 1rem;
+}
+
+#desktop-nav{
+    background-color: rgb(223, 217, 185);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfoli0*/
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates 2 columns */
+    gap: 10px; /* Adjust for spacing between grid items */
+    
+}
+
+.content-section {
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    display: grid; /* Using grid layout within each section too */
+    grid-template-rows: auto auto; /* Two rows: one for image, one for text */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-top: 20px !important; 
+    height: fit-content;
+    
+}
+
+.image-section {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    flex-direction: column;
+    text-align: center;
+    
+}
+#buss .text-section{
+    padding: 0px;
+
+}
+.text-section {
+    padding: 10px; /* Adjust as necessary */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+}
+
+.image-section img {
+    width: auto;
+    height: 300px;
+    padding: 20px;
+    
+}
+.image-section h2 {
+    width: auto;
+    padding-bottom: 20px;
+
+}
+#buss h2 {
+    width: auto;
+    padding-bottom: 50px;
+
+}
+.text-section p, .text-section ul {
+    text-align: center;
+    margin: 5px 0; /* Adjust as necessary */
+}
+
+/* For the buttons */
+.centered-buttons {
+    text-align: center; /* Center the buttons */
+    margin-top: 20px;
+}
+.btn-container-qual{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+.btn_qual {
+    padding: 10px 20px;
+    margin: 0px 10px; /* Space between the buttons */
+    background-color: #333; /* A sample color, you can change */
+    color: #fff; /* Text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.btn_qual:hover {
+    background-color: #555; /* A lighter shade for hover effect */
+}
+
+.allboxcontent{
+    display: flex;
+    flex-direction: column-reverse;
+}
+/* For the boxes */
+.centered-boxes {
+    display: flex;
+    justify-content: center; /* Horizontally center the boxes */
+    margin-top: 20px;
+    gap:20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 40%; /* Width of the box, you can adjust */
+    padding: 20px;
+    margin: 0 10px; /* Space between the boxes */
+    border: 1px solid #8b8787; /* A light border */
+    text-align: center; /* Center the title and information */
+    background-color: rgb(244, 244, 244);
+    border-radius: 15px;
+    box-shadow:  0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.box h3 {
+    margin-bottom: 10px; /* Space between the title and the information */
+}
+.box-row{
+    display: flex;
+    justify-content: center; /* Horizontally center the boxes */
+    margin-top: 20px;
+    gap:20px;
+    margin-bottom: 20px;
+}
+
+
+.three-columns {
+    display: block;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 10px 15px; /* Adding some spacing between the columns */
+    text-align: center; /* Centering the content */
+    display: flex;
+    align-items: center;
+    border-bottom: rgb(120, 51, 51) 0.1rem solid;
+
+}
+
+.column img {
+    max-width: 100%; /* Making sure the image doesn't overflow its container */
+    height: 250px;
+    margin-bottom: 10px; /* Spacing between image and title */
+    margin-right: 2rem;
+}
+
+.column h3 {
+    padding:15px; /* Spacing between title and description */
+    width : 600px;
+}
+.column .btn-container-service {
+    flex: 1;  /* Allows these elements to take up the remaining space evenly */
+}
+#s2 img{
+    margin-right: 120px;
+}
+#s3 img{
+    margin-right: 50px;
+}
+
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+}
+#contact p{
+    color: rgb(120, 33, 33)
+}
+#contact h1{
+    color: maroon;
+}
+
+.contaact-info-upper-container{
+    display:flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: maroon 0.1rem solid;
+    border-color: maroon;
+    background: (250,250,250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-info-container p a{
+    color: rgb(124, 72, 72);
+}
+.contact-icon{
+    cursor: default;
+}
+
+.email-icon{
+    height: 2.5rem;
+}
+
+.btn-service{
+    padding: 10px;
+    background-color: #b6eecd;
+
+    cursor: pointer;
+}
+.btn-container-service{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#portfoliolist{
+    list-style-type: circle;
+}
+
+.transparent-background {
+    width: 100%; /* or a fixed width like 400px depending on your requirement */
+    height: 220px; /* or a fixed height like 300px depending on your requirement */
+    background-color:rgb(53, 55, 64); /* Black background with 50% transparency */
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+.centered-image {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    width: 90%
+    
+}

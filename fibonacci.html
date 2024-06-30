@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+
+<body>
+    <div class="toggle">
+        <button type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+    </div>
+    <nav id="desktop-nav">
+        <div class="logo">Naveed Haq</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Naveed Haq</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="qualifications.html" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="fibonacci.html" onclick="toggleMenu()">Fibonacci</a></li>
+
+            </div>
+        </div>
+    </nav>
+    <div style="height:12vh; background-color: transparent;"></div>
+
+    <body>
+
+        <h2>Fibonacci of a Million</h2>
+        <pre id="fib-content"></pre>
+
+        <h2>Python Code</h2>
+        <pre id="python-code"></pre>
+
+        <p>
+            <a href="images/fibonacci.py" download="fibonacci.py">Download Python Code</a>
+        </p>
+
+        <script>
+            // Fetch the Fibonacci number from the text file and display it
+            fetch('images/fibonacci.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('fib-content').textContent = data;
+                });
+
+            // Fetch the Python code from the .py file and display it
+            fetch('images/fibonacci.py')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('python-code').textContent = data;
+                });
+        </script>
+
+    </body>
+
+</html>
