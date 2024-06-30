@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing dependencies
+      - yum update -y
+      - yum install -y nodejs npm
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      - npm run build
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
