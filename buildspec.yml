@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-     - aws s3 cp index.html s3://secure-website-artifacts-naveed/index.html --content-type text/html
+      - aws s3 cp index.html s3://secure-website-artifacts-naveed/index.html --content-type text/html
       - aws s3 cp -r css/ s3://secure-website-artifacts-naveed/css/ --content-type text/css
 artifacts:
   files:
